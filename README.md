@@ -1,0 +1,1 @@
+This is a website for Drexel students to rate co-ops that they have had experience with. As there is already an existing system called ES&P Archives, we decided to make a more user friendly version of this.
