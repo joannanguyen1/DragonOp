@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dragon-Op</title>
+  <meta name="viewport" content="width=device-width, inital scale=1.0">
+  <link rel="stylesheet" href="static/about.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+  
+<body>
+  <nav>
+    <a href="home.html"><img id= "dragon" src="static/photos\whitedragon.png" style="width:5.313rem;height:4.375rem; padding-left: 1.25rem; padding-bottom: 0.938rem;"></a>
+    <input type="checkbox" id="check">
+    <label for="check" class ="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class = "logo">Dragon-Op</label>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+        <li><a href="forum.html">Forum</a></li>
+        <li><a href="login.html">Log In</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li>
+            <input style = "display:flex; justify-content:center; text-align:center; border-radius: 2rem; padding: 0 .1rem 0 .1rem;" type = "text" placeholder="search here">
+        </li>
+    </ul>
+</nav>
+    <div id="header">
+        <h1>Who are we?</h1>
+        <p>As first-year Drexel students, we are anxious and curious about the co-op process, and our inquries sparked the idea of Dragon-Op. When beginning this project, we were completely unaware that there is a similar resource, ES&P Archives, so this could be considered an homage, or a revamping, in order to make more Drexel students aware of the experiences of fellow Dragons. As we, and Mario the Magnificent, preach honesty, we hope to let all of users get to know a bit about who we are!</p>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="static/photos/derrickImage.jpeg" style="display: block; width: 21.875rem; height: 28.125rem; padding-left: 3.125rem; padding-top: 1.875rem; padding-bottom: 1.875rem;">
+        </div> 
+        <div class="column">
+            <h1>Derrrick Borden</h1>
+            <h2>Developer+UI/UX</h2>
+            <p>I'm Derrick Borden and I'm a Freshman Computer Science major with minimal experience at coding and UI/UX with the exception of some  Python learning. However, I have kept all A's since my first quarter at Drexel University and plan to keep this behavior up. I have worked one job at The Curry Pizza Company back in my hometown where I learned to take pride in my work and succeed in times of high-pressure situations, and I intend to keep these attributes consistent throughout my CI 102 course.</p>
+        </div>
+    </div>
+    <div class="row" style="background-color: #002F6C;">
+        <div class="column" style="padding-left: 1.25rem; padding-right: 0.625rem; color: white;">
+            <h1>Joanna Nguyen</h1>
+            <h2>Developer+UI/UX</h2>
+            <p>My name is Joanna Nguyen, I am a first year computer science major at Drexel University! I have no prior experiences with coding, however I currently learning Python. I am working on a project called Dragon-Op, where Drexel students are able to post reviews and feedback with their co-ops in order to aid peers with their co-op inquries or concerns.</p>
+        </div> 
+        <div class="column">
+            <img src="static/photos/JoannaImage.png" style="display: block; width: 23.438rem; height: 26.125rem; padding-left: 5.625rem; padding-top: 1.875rem; padding-bottom: 1.875rem;">
+        </div>
+    </div>
+    <div class="row" style="background-color: #f2ca00;">
+        <div class="column">
+            <img src="static/photos/patImage.png" style="display: block; width: 21.875rem; height: 28.125rem; padding-left: 3.125rem; padding-top: 1.875rem; padding-bottom: 1.875rem;">
+        </div> 
+        <div class="column" style="color: white;">
+            <h1>Patrick Utama</h1>
+            <h2>Developer+UI/UX</h2>
+            <p>Hi! My name is Patrick Utama and I am a computer science major at Drexel University. I have some previous coding experience in Java and HTML, and I am currently learning Python. I am also currently working on a project that will allow students to talk about their co-op experiences on a website, and rate their experiences. I hope to work a job that is related to my major, as I am currently working at the Lincoln Financial Field.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column" style="padding-left: 1.25rem; padding-right: 0.625rem;">
+            <h1>Matthew Li</h1>
+            <h2>Developer+UI/UX</h2>
+            <p>Hello my name is Matthew Li. I am a computer science major. I have some experience with coding in Java but I have no experience with web design. My project is similar to reddit but for students that are currently in a co-op or already finished it.</p>
+        </div> 
+        <div class="column">
+            <img src="static/photos/MatthewImage.png" style="display: block; width: 23.438rem; height: 28.125rem; padding-left: 5.625rem; padding-top: 1.875rem; padding-bottom: 1.875rem;">
+        </div>
+    </div> 
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+</body>
+<footer>
+    <a href="help.html">Help!</a>
+</footer>
+</html>
+
+<script>
+    let mybutton = document.getElementById("myBtn");
+    
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+</script>

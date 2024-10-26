@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Forum</title>
+  <meta name="viewport" content="width=device-width, inital scale=1.0">
+  <link rel="stylesheet" href="static/forum.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+  
+<body>
+    <header>
+        <nav>
+            <a href="home.html"><img id= "dragon" src="static/photos\whitedragon.png" style="width:5.313rem;height:4.375rem; padding-left: 1.25rem; padding-bottom: 0.938rem; margin-right: 5px;"></a>
+            </label>
+            <label class = "logo">Dragon-Op</label>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="forum.html">Majors</a></li>
+                <li><a href="co_ops.html">Co-ops</a></li>
+                <li><a href="posts.html">Submissions</a></li>
+                <li><a href="logout">Logout</a><li>
+            </ul>
+        </nav>
+        </div>
+        
+    </header>
+
+    <div class="container">
+        <div class="subforum">
+            <div class="subforum-title">
+                <h1><a href="">Major #1</a></h1>
+            </div>
+            <div class="subforum-row">
+              <img src="static/photos/drexel-dragon-logo.png" width="70px">
+
+            <div class="subforum-description subforum-column">
+            <h1><small>Description Title:</small></h1>
+            <p>Description Content:  asodfji aporitchmeiruyohcjfkweorjiythcerk</p>
+            </div>
+            <div class="subforum-stats subforum-column center">
+                <span>24 Posts | 15 Topics</span>
+            </div>
+            <div class="subforum-info subforum-column">
+                <b><a href="">Last post</a></b> by <a href="">JustAUser</a> 
+                <br>
+                on <small>12 Dec 2020</small>
+            </div>
+        </div>
+        <hr class="subforum-divider">
+            <div class="subforum-title">
+                <h1><a href="">Major #2</a></h1>
+            </div>
+            <div class="subforum-row">
+              <img src="static/photos/drexel-dragon-logo.png" width="70px">
+
+            <div class="subforum-description subforum-column">
+            <h1><small>Description Title:</small></h1>
+            <p>Description Content:  asodfji aporitchmeiruyohcjfkweorjiythcerk</p>
+            </div>
+            <div class="subforum-stats subforum-column center">
+                <span>24 Posts | 15 Topics</span>
+            </div>
+            <div class="subforum-info subforum-column">
+                <b><a href="">Last post</a></b> by <a href="">JustAUser</a> 
+                <br>
+                on <small>12 Dec 2020</small>
+            </div>
+        </div>
+        <hr class="subforum-divider">
+        <div class="subforum-title">
+                <h1><a href="">Major #3</a></h1>
+            </div>
+            <div class="subforum-row">
+              <img src="static/photos/drexel-dragon-logo.png" width="70px">
+            <div class="subforum-description subforum-column">
+            <h1><small>Description Title:</small></h1>
+            <p>Description Content: fjdlakjsdf asodfji aporitchmeiruyohcjfkweorjiythcerk</p>
+            </div>
+            <div class="subforum-stats subforum-column center">
+                <span>24 Posts | 15 Topics</span>
+            </div>
+            <div class="subforum-info subforum-column">
+                <b><a href="">Last post</a></b> by <a href="">JustAUser</a> 
+                <br>
+                on <small>12 Dec 2020</small>
+            </div>
+        </div>
+        <hr class="subforum-divider">
+        <div class="subforum-title">
+            <h1><a href="">Major #4</a></h1>
+        </div>
+        <div class="subforum-row">
+          <img src="static/photos/drexel-dragon-logo.png" width="70px">
+        <div class="subforum-description subforum-column">
+        <h1><small>Description Title:</small></h1>
+        <p>Description Content: aaaaa</p>
+        </div>
+        <div class="subforum-stats subforum-column center">
+            <span>24 Posts | 15 Topics</span>
+        </div>
+        <div class="subforum-info subforum-column">
+            <b><a href="">Last post</a></b> by <a href="">JustAUser</a> 
+            <br>
+            on <small>12 Dec 2020</small>
+        </div>
+    </div>
+    <div class="forum-info">
+        <div class="chart">
+            Reviews - Stats &nbsp;<i class="fa fa-bar-chart"></i>
+        </div>
+        <div>
+            <span> <u>1,230 Posts</u> in <u>100</u> Topics by <u>2,492 Users</u></span>
+            <br>
+            <span> Latest Post: <b><a href="#"></a>RandomUser</b></span>
+        </div>
+    </div>
+
+{% block javascript %}
+    <script type="text/javascript">
+      function deleteNote(noteId) {
+  fetch("/delete-note", {
+    method: "POST",
+    body: JSON.stringify({ noteId: noteId }),
+  }).then((_res) => {
+    window.location.href = "/";
+  });
+  }
+{% endblock %}

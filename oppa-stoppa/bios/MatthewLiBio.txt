@@ -1,0 +1,1 @@
+Hello my name is Matthew Li. I am a computer science major. My project is similar to reddit but for students that are currently in a co-op or already finished it.

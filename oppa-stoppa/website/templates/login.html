@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dragon-Op</title>
+  <meta name="viewport" content="width=device-width, inital scale=1.0">
+  <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+  <link rel="stylesheet" href="static/login.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+  
+<body>
+    <nav>
+      <a href="home.html"><img id= "dragon" src="static/photos\whitedragon.png" style="width:5.313rem;height:4.375rem; padding-left: 1.25rem; padding-bottom: 0.938rem;"></a>
+        <input type="checkbox" id="check">
+        <label for="check" class ="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class = "logo">Dragon-Op</label>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+            <li><a href="login.html">Log In</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li>
+                <input style = "display:flex; justify-content:center; text-align:center; border-radius: 2rem; padding: 0 .1rem 0 .1rem;" type = "text" placeholder="search here">
+            </li>
+        </ul>
+    </nav>
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %} {% if category ==
+        'error' %}
+        <div class="alert alert-danger alter-dismissable fade show" role="alert">
+          {{ message }}
+        </div>
+        {% else %}
+        <div class="alert alert-success alter-dismissable fade show" role="alert">
+          {{ message }}
+        </div>
+        {% endif %} {% endfor %} {% endif %} {% endwith %}
+    <div class="login_box">
+        <h1>Log In</h1>
+        <form method='POST'>
+            <p>Email</p>
+            <input type="text" id="name" name="email" placeholder="Email">
+            <p>Password</p>
+            <input type="password" id="password" name="password" placeholder="Password">
+            <input type="submit" name="" value="Log In" onclick= "validate()">
+            <br>
+            <a href="#">Forgot Password?</a><br>
+            <a href="register.html">Don't have an account? Register!</a>
+        </form>
+        <h2> </h2>
+    </div>
+</body>

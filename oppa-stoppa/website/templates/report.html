@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="report.css">
+    <title>Report Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Report Form</h1>
+        <form action="" id="reportForm">
+            <div class="inputBox">
+                <input type="text" id="yourName" placeholder="Your Name">
+            </div>
+            
+            <div class="inputBox">
+                <input type="text" id="reportedPerson" placeholder="Reported Person">
+            </div>
+            
+            <div class="inputBox">
+                <textarea id="reason" placeholder="Reason" cols="30" rows="10"></textarea>
+            </div>
+            
+            <div class="inputBox">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1/firebase.js"></script>
+<script src="report.js"></script>
+</html>
+

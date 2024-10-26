@@ -1,0 +1,1 @@
+My name is Joanna Nguyen, I am a first year computer science major at Drexel University! I have no prior experiences with coding, however I currently learning Python. I am working on a project called Dragon-Op, where Drexel students are able to post reviews and feedback with their co-ops in order to aid peers with their co-op inquries or concerns.

@@ -1,0 +1,31 @@
+Glossary:
+Home
+About 
+Contact Us
+Log In
+Register
+Forum
+
+Home:
+The homepage contains basic information about the website and displays the purpose, reasons, and the pitch for the project.
+In the navigation bar, you are able to access the Log In and Register pages to either sign into your existing account or create a new one.
+There is also a button at the bottom of the page that allows you to directly access the login page instead of using the navigation bar.
+
+Register:
+In order to create an account for the website, users must have a drexel email (@drexel.edu), a first name longer than 1 character, a password
+at least 7 characters long, matching confirmation passwords, and an email that does not have an account already linked to it. Enter in your first name, last name, email, and a password along with a matching confirmation password in this respective order, and your account will be created if you meet all previously-stated criteria.
+
+Login:
+To login, users must enter a valid email that's been registered and the matching that was created with it. User will be reprompted every time they provide an invalid email and/or password. Users cannot login to the website without using a registered account with an email and corresponding password.
+
+About:
+The About Us page has general information about all the developers of the website. There's not much functionality relavant to the objective of the website. Users will see a button when they get to the bottom of the page to scroll up, but there's no other activity other than reading information.
+
+Contact Us:
+To send suggestions or questions to the developers of the website, users must input their first name, last name, email, and whatever information they'd
+like to send to the developers. When they press submit, their information along with their message will be emailed to an account where developers can read feedback.
+
+Forum:
+To navigate through the forum, users will see a list of the majors that contain co-ops that submissions fall under. When the user clicks on the major,
+they will be brought to a new page with a list of the co-ops that fall under that major category. When the user clicks on a co-op, they'll be brought
+to the deepest page with a list of reviews along with the users who posted those submissions. Here, users can read the review, upvote, downvote, or comment on the submission. To submit a review,

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dragon-Op</title>
+  <meta name="viewport" content="width=device-width, inital scale=1.0">
+  <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+  <link href="static/register.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+  
+<body>
+    <nav>
+      <a href="home.html"><img id= "dragon" src="static/photos\whitedragon.png" style="width:5.313rem;height:4.375rem; padding-left: 1.25rem; padding-bottom: 0.938rem;"></a>
+        <input type="checkbox" id="check">
+        <label for="check" class ="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class = "logo">Dragon-Op</label>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+            <li><a href="login.html">Log In</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li>
+                <input style = "display:flex; justify-content:center; text-align:center; border-radius: 2rem; padding: 2px, 2px;" type = "text" placeholder="search here">
+            </li>
+        </ul>
+    </nav>
+
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %} {% if category ==
+        'error' %}
+        <div class="alert alert-danger alter-dismissable fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% else %}
+        <div class="alert alert-success alter-dismissable fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endif %} {% endfor %} {% endif %} {% endwith %}
+    
+    <div class="login_box">
+        <h1>Register</h1>
+        <form method='POST'>
+            <p>First Name</p>
+            <input type="text" id="Fname" name="Fname" placeholder="Enter First name" required>
+            <p>Last Name</p>
+            <input type="text" id="Lname" name="Lname" placeholder="Enter Last name" required>
+            <p>Email</p>
+            <input type="text" id="email" name="email" placeholder="Enter Drexel Email" required>
+            <p>Password</p>
+            <input type="text" id="password" name="password" placeholder="Enter Password" required>
+            <p>Confirm Password</p>
+            <input type="text" id="confirmpassword" name="confirmpassword" placeholder="Confirm password" required>
+            <input type="submit" value="Register">
+        </form>
+        <h2> </h2>
+    </div>
+    <div class="container">{% block content %} {% endblock %}</div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+{% block javascript %}
+    <script type="text/javascript">
+      function deleteNote(noteId) {
+  fetch("/delete-note", {
+    method: "POST",
+    body: JSON.stringify({ noteId: noteId }),
+  }).then((_res) => {
+    window.location.href = "/";
+  });
+  }
+</script>
+{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Forum</title>
+  <meta name="viewport" content="width=device-width, inital scale=1.0">
+  <link rel="stylesheet" href="static/forum.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="static/forum.js"></script>
+
+</head>
+  
+<body>
+    <header>
+        <nav>
+            <a href="home.html"><img id= "dragon" src="static/photos\whitedragon.png" style="width:5.313rem;height:4.375rem; padding-left: 1.25rem; padding-bottom: 0.938rem; margin-right: 5px;"></a>
+            </label>
+            <label class = "logo">Dragon-Op</label>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="forum.html">Majors</a></li>
+                <li><a href="co_ops.html">Co-ops</a></li>
+                <li><a href="posts.html">Submissions</a></li>
+            </ul>
+        </nav>
+        </div>
+        <div class="search-box">
+            <div>
+                <input type="text" name="q" id="" placeholder="search ...">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="navigate">
+            <span><a href="#">Forum</a> >> <a href="#">Random Major</a> >> <a href="#">Random Post</a></span>
+        </div>        
+        <div class="review-container">
+            <div class="head">
+                <div class="authors">Author</div>
+                <div class="content">Co-op: Lockheed Martin</div> (viwed 97 Times)</div>
+            </div>
+            <div class="body">
+                <div class="authors">
+                    <div class="username"><a href="#">Username</a></div>
+                    <div>Role</div>
+                    <img src="https://raw.githubusercontent.com/Ashwinvalento/cartoon-avatar/master/lib/images/female/5.png">
+                    <div>Posts: <a href="#">2</a></div>
+                </div>
+
+                <div class="content">
+                    This Co-op was amazing. Everyone here was so friendly even at times when I felt like my work was insufficient. I would definitely come back to this place after I finish school at Drexel, but I'm taking a co-op at a different place next time just in case I'll regret expanding my horizon in the future.
+                    <div class="comment">
+                        <button onclick="showComment()">Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comment-area hide" id="comment-area">
+            <textarea name="comment" id=""placeholder="comment here...."></textarea>
+            <input type="submit" name="" id="" value="Submit">
+        </div>
+    </div>
+    <div class="container">
+        <div class="navigate">
+            <span><a href="#">Forum</a> >> <a href="#">Random Major</a> >> <a href="#">Random Post</a></span>
+        </div>        
+        <div class="comments-container">
+            <div class="head">
+                <div class="authors">Author</div>
+                <div class="content">Comments</div>
+            </div>
+            <div class="body">
+                <div class="authors">
+                    <div class="AnotherUser"><a href="#">Username</a></div>
+                    <div>Role</div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCs6od8q-1x9bmAW-2Oo0Fsrmb9xWclMw1EQ&usqp=CAU">
+                    <div>Posts: <a href="#">2</a></div>
+                </div>
+
+                <div class="content">
+                    I  went on co-op at Lockheed Martin and it pays really good money. I know this shouldn't be the be all end all when deciding a co-op, but for the amount of work you do, I believe the pay is definitely worth it
+                    <div class="comment">
+                        <button onclick="showReply()">Reply</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="comment-area hide" id="reply-area">
+            <textarea name="comment" id=""placeholder="reply here...."></textarea>
+            <input type="submit" name="" id="" value="Submit">
+        </div>

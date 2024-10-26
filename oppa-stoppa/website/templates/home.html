@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dragon-Op</title>
+  <meta name="viewport" content="width=device-width, inital scale=1.0">
+  <link rel="stylesheet" href="static/home.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+  
+<body>
+  <nav>
+    <a href="home.html"><img id= "dragon" src="static/photos\whitedragon.png" style="width:5.313rem;height:4.375rem; padding-left: 1.25rem; padding-bottom: 0.938rem;"></a>
+    <input type="checkbox" id="check">
+    <label for="check" class ="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class = "logo">Dragon-Op</label>
+    <ul>
+      {% if current_user.is_authenticated %}
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+        <li><a href="forum.html">Forum</a></li>
+        <li><a href="login.html">Log In</a></li>
+        <li><a href="register.html">Register</a></li>
+      {% endif %}
+    </ul>
+</nav>
+{% with messages = get_flashed_messages(with_categories=true) %} {% if
+  messages %} {% for category, message in messages %} {% if category ==
+  'error' %}
+  <div class="alert alert-danger alter-dismissable fade show" role="alert">
+    {{ message }}
+  </div>
+  {% else %}
+  <div class="alert alert-success alter-dismissable fade show" role="alert">
+    {{ message }}
+  </div>
+  {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+    <div class="row" style="background-color: #fedf00">
+        <div class="column">
+            <img src="static/photos\DragonAnimation.gif" style="width: 37.5rem; height:28.125rem;">
+        </div>
+        <div class="column">
+            <img src="static/photos\gooddragonspeech.png" style="width: 29.688rem; height:25rem;">
+        </div>
+    </div>
+
+    <div class="slideshow-container" style= "margin-top: 1.25rem">
+        <div class="mySlides fade">
+          <img src="static/photos\dragoncoopposter.jpg" style="width:100%">
+          <div class="text" style="font-weight: bold;">Join others on the quest to find the perfect co-op!</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="static/photos/drexelstudents.jpg" style="width:100%">
+          <div class="text" style="font-weight: bold;">Made for Drexel students, by Drexel students!</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="static/photos\coop.gif" style="width:100%">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+    </div>
+
+    <div id="info" style="background-color: #002F6C">
+        <h1>What is Dragon-Op?</h1>
+        <p>Drexel students cannot blindly apply to co-ops. It’s true that Drexel-affiliated co-ops have plenty of information and resources for students to research before applying. However, regardless of how professional companies may seem on the outside, there’s no better information to have than first-hand experiences. Dragon-Op is a forum website that allows Drexel students to submit reviews and ratings on co-ops they’ve been through, describing their experiences for those wondering which co-ops are worth working at. </p>
+    </div>
+
+    <div class="container" style="background-color: #fedf00">
+      <img src="static/photos\honestdragon.png">
+      <h1>Our mission</h1>
+    <p>We aim to provide every Drexel student with real and honest opinions and reviews of Drexel-affliated co-ops from fellow dragons!</p>
+  </div>
+
+  <div id="quiz">
+    <h2>How much do you know about co-ops?</h2>
+    <p id="question"></p>
+    <ul id="choices">
+    </ul>
+  </div>
+
+  <div id="result" style="display: none;">
+    <h2>Results</h2>
+    <p id="score"></p>
+  </div>
+
+  <div id="more" style="background-color: #002F6C">
+    <h1>Why?</h1>
+    <p>As first-year Drexel students, we wanted to create a discussion platform for other students who are unsure or nervous about their co-op. We feel like there is little known resources to aid the co-op process other than your advisor, however wouldn't you like to hear from those who have actually participated in the co-op?</p>
+</div>
+
+<div id="join" style="background-color: #fedf00">
+  <h1>Join Now!</h1>
+  <p>Have you ever had an experience you would like to share about a co-op? Or do you need to express your opinions on your time with these companies? Sign up or Login now to unleash the power of discussion! </p>
+  <a href="login.html" class="button">Log In/Sign Up</a>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+</body>
+
+<footer>
+  <div class="row" style="color: white;"></div>
+  <a href="help.html">Help!</a>
+</footer>
+
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+
+<script>
+  let mybutton = document.getElementById("myBtn");
+  
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+<script>
+  const quizData = [
+    {
+      question: "During each round, what is the maximum number of jobs you can apply to in the SCDC Online System?",
+      choices: ["30", "20", "50", "10"],
+      correctAnswer: 0
+    },
+    {
+      question: "Students must attend EVERY interview offer they are granted through the SCDC Online job search process.",
+      choices: ["True", "False"],
+      correctAnswer: 0
+    },
+    {
+      question: "How many job placement rounds are there in the co-op job search process?",
+      choices: ["2", "5", "1", "3"],
+      correctAnswer: 3
+    },
+    {
+      question: "Select the option that is false about not securing a co-op after Round C.",
+      choices: ["Student will have to register for full-time classes during the next term", "Student will have to reduce their schedule to part-time", "Student can take a leave of absence", "Students must find an alternative co-op option"],
+      correctAnswer: 3
+    },
+    {
+      question: "You must complete ALL of the following actions to be eligible for the co-op job search process EXCEPT",
+      choices: ["Full-Time student", "Enrolled in or completed CO-OP 101", "Submit a copy of your resume to your co-op advisor", "No account holds"],
+      correctAnswer: 2
+    }
+    
+  ];
+
+  let currentQuestion = 0;
+  let score = 0;
+
+  const quiz = document.getElementById("quiz");
+  const questionText = document.getElementById("question");
+  const choicesList = document.getElementById("choices");
+  const submitBtn = document.getElementById("submit");
+  const resultDiv = document.getElementById("result");
+  const scoreText = document.getElementById("score");
+
+  function loadQuestion() {
+    const currentQuizData = quizData[currentQuestion];
+    questionText.textContent = currentQuizData.question;
+
+    choicesList.innerHTML = "";
+    currentQuizData.choices.forEach((choice, index) => {
+      const li = document.createElement("li");
+      li.textContent = choice;
+      li.addEventListener("click", () => {
+        submitAnswer(index);
+      });
+      choicesList.appendChild(li);
+    });
+  }
+
+  function submitAnswer(choiceIndex) {
+    const currentQuizData = quizData[currentQuestion];
+
+    if (choiceIndex === currentQuizData.correctAnswer) {
+      score++;
+    }
+
+    currentQuestion++;
+
+    if (currentQuestion < quizData.length) {
+      loadQuestion();
+    } else {
+      showResult();
+    }
+  }
+
+  function showResult() {
+    quiz.style.display = "none";
+    resultDiv.style.display = "block";
+    scoreText.textContent = `Your score: ${score} out of ${quizData.length}`;
+  }
+
+  loadQuestion();
+
+  submitBtn.addEventListener("click", () => {
+    const selectedChoice = Array.from(choicesList.children).findIndex((li) =>
+      li.classList.contains("selected")
+    );
+
+    if (selectedChoice >= 0) {
+      submitAnswer(selectedChoice);
+    }
+  });
+</script>
+</script>

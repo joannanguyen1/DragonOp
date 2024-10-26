@@ -1,0 +1,3 @@
+Hi! My name is Patrick Utama and I am a computer science major at Drexel University.
+I have some previous coding experience in Java and HTML, and I am currently learning Python. I am also currently working on a project that will allow students to talk about their co-op experiences on a website, and rate their experiences.
+I hope to work a job that is related to my major, as I am currently working at the Lincoln Financial Field.

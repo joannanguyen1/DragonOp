@@ -1,0 +1,540 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    font-family: "Quicksand", sans-serif;
+}
+
+header{
+    font-size: 20px;
+}
+
+
+.subforum input[type="submit"]:hover {
+    cursor:pointer;
+    background: white;
+    color: #002F6C;
+}
+nav{
+    background: #002F6C;
+    height: 5rem;
+    width: 100%;
+}
+label.logo{
+  color: #f2ca00;
+  font-size: 2.813rem;
+  line-height: 5rem;
+  padding: 0 1.25rem;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 1.25rem;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 5rem;
+  margin: 0 0.313rem;
+}
+
+nav ul li a{
+  color: white;
+  font-size: 1.063rem;
+  padding: 0.438rem 0.813rem;
+  border-radius: 0.188rem;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background:#f2ca00;
+  transition: .5s;
+}
+.checkbtn{
+  font-size:1.875rem;
+  color: white;
+  float: right;
+  line-height: 5rem;
+  margin-right:2.5rem;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 59.5rem){
+  label.logo{
+      font-size: 1.875rem;
+      padding-left: 3.125rem;
+  }
+  nav ul li a{
+      font-size: 1rem;
+  }
+}
+@media (max-width: 53.625rem){
+  .checkbtn{
+      display: block;
+  }
+  ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: white;
+      top: 5rem;
+      left: -100%;
+      text-align: center; 
+      transition: all .5s;
+  }
+  nav ul li{
+      display: block;
+      margin: 3.125rem 0;
+      line-height: 1.875rem;
+  }
+  nav ul li a{
+      font-size: 1.25rem;
+  }
+  a:hover,a.active{
+      background: none;
+      color: #f2ca00;
+  }
+  #check:checked ~ ul{
+      left: 0;
+
+  }
+}
+
+nav ul{
+    float: right;
+    margin-right: 1.25rem;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 5rem;
+    margin: 0 0.313rem;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 1.063rem;
+    padding: 0.438rem 0.813rem;
+    border-radius: 0.188rem;
+    text-transform: uppercase;
+}
+a.active,a:hover{
+    background:#f2ca00;
+    transition: .5s;
+}
+.checkbtn{
+    font-size:1.875rem;
+    color: white;
+    float: right;
+    line-height: 5rem;
+    margin-right:2.5rem;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 59.5rem){
+    label.logo{
+        font-size: 1.875rem;
+        padding-left: 3.125rem;
+    }
+    nav ul li a{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 53.625rem){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        top: 5rem;
+        left: -100%;
+        text-align: center; 
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 3.125rem 0;
+        line-height: 1.875rem;
+    }
+    nav ul li a{
+        font-size: 1.25rem;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #f2ca00;
+    }
+    #check:checked ~ ul{
+        left: 0;
+
+    }
+}
+
+
+.navigation{
+    background-color: #002F6C;
+    padding: 10px;
+    width: 100%;
+    display: block;
+    max-height: 80px;
+}
+
+.nav-list{
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.nav-item a{
+    float: right;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    margin-inline: 20px;
+    padding: 10px;
+    color: #FFFFFF;
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.nav-item a:hover{
+    background-color: #F2CA00;
+    transition: .5s;
+}
+
+.home-button a{
+    float: left;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    margin-inline: 20px;
+    padding: 10px;
+    color: #FFFFFF;
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.home-button a:hover{
+    background-color: #F2CA00;
+    transition: .5s;
+}
+
+.hide{
+    display: none;
+}
+
+
+h1{
+    color: #002F6C;
+}
+
+
+
+a.active,a:hover{
+    color: #002F6C;
+    transition: .5s;
+    text-decoration: underline;
+
+}
+
+a{
+    color:#002F6C
+}
+
+
+
+.container{
+    margin: 10px;
+    padding: 10px;
+}
+
+img{
+    margin-top: 5px;
+}
+
+.subforum{
+    margin-top:30px;
+}
+
+.subforum-title{
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    color: #002F6C;
+    margin-bottom: 10px
+
+}
+
+
+.subforum-row{
+    display: grid;
+    grid-template-columns: 7% 60% 13% 20%;
+    margin-bottom: 10px;
+}
+
+.subforum-divider{
+    display: block;
+    border: 0;
+    height: 5px;
+    background-image: linear-gradient(to right,#FFFFFF, #002F6C, #FFFFFF);
+    margin-bottom: 15px;
+}
+
+.subforum-column{
+    padding: 10px;
+    margin:4px;
+    background-color: #F2CA00;
+    border-style: solid;
+    border-color: #002F6C;
+    border-radius: 5px;
+    border-width: 2px;
+}
+
+.subforum-description *{
+    margin-block: 0;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subforum-divider{
+    display: none;
+}
+
+.chart{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* For the smartphones */
+@media screen and (max-width: 600px) {
+    .container{
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .subforum-row{
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 65% 35%;
+    }
+    .subforum-divider{
+        display: block;
+    }
+
+
+    
+
+  }
+
+/* For the tablets */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    .container{
+        margin: 15px;
+        padding: 15px;
+    }
+
+
+    .subforum-row{
+        display: grid;
+        grid-template-columns: 10% 60% 10% 20%;
+    }
+}
+
+.table-head{
+    display: flex;
+}
+
+.table-head div{
+    color: #FFFFFF;
+    padding: 5px;
+    margin: 2px;
+    background-color: #002F6C;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.table-head .profile{
+    flex: 5%;
+}
+
+.table-head .majors{
+    flex: 70%;
+}
+
+.table-head .replies{
+    flex: 10%;
+}
+
+.table-head .last-reply{
+    flex: 15%;
+}
+
+/* posts table's body  */
+
+.table-row{
+    display: flex;
+}
+
+.table-row .profile, .table-row .majors, .table-row .replies, .table-row .last-reply{
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-inline: 2px;
+    border-style: solid;
+    border-color: #F2CA00;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+.table-row .profile{
+    flex: 5%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.table-row .majors{
+    flex: 70%;
+}
+
+.table-row .replies{
+    flex: 10%;
+}
+
+.table-row .last-reply{
+    flex: 15%;
+
+}
+
+.pagination{
+    padding: 20px;
+    font-size: 15px;
+}
+
+.pagination a{
+    color: #FFFFFF;
+    margin-inline: 5px;
+    padding: 5px 10px;
+    background-color: #002F6C;
+    border-radius: 5px
+}
+
+.pagination a:hover{
+    color: #002F6C;
+    transition: 0.5s;
+}
+
+.navigate{
+    margin-block: 20px;
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+.navigate a:hover{
+    color: #F2CA00;
+    font-weight: bolder;
+    transition: 0.2s;
+}
+
+.head{
+    display: flex;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: #F2CA00;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.authors{
+    flex: 20%;
+    color: #002F6C;
+    font-size: 20px;
+}
+
+.authors a{
+    text-decoration: underline;
+}
+
+.co-op {
+    flex: 80%;
+    color: #002F6C;
+    font-size: 20px;
+}
+.content{
+    flex: 80%;
+}
+
+.body{
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+}
+
+.body .authors .username{
+    font-size: 20px;
+}
+
+.body .authors img{
+    max-width: 75%;
+    max-height: 80%;
+}
+
+.delete-button a{
+    border-style: solid;
+    border-color: #002F6C;
+    border-width: 0.5px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    color: #002F6C;
+    padding: 2px;
+    cursor: pointer;
+    float: right;
+    margin-top: 10px;
+}
+
+.delete-button:hover a{
+    background-color: #F2CA00;
+    color: #FFFFFF;
+    transition: 0.2s;
+}    
+
+.content-area textarea{
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    margin-block: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #002F6C;
+    border-radius: 5px;
+}
+
+.content-area input{
+    font-family: "Quicksand", sans-serif;
+    font-size: 10px;
+    color: #002F6C;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #002F6C;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+
